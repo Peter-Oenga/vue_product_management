@@ -7,5 +7,5 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: '/vue_product_management/'
+  base: '/vue_product_management/product-management-app/'
 })
