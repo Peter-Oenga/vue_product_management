@@ -7,5 +7,12 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: '/vue_product_management/'
+
+  // ✔ IMPORTANT: GitHub Pages base path
+  base: '/vue_product_management/',
+
+  // ✔ IMPORTANT: Build output goes to /docs (so GitHub Pages can use main branch)
+  build: {
+    outDir: 'docs'
+  }
 })
