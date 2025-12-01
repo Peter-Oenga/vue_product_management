@@ -12,7 +12,6 @@ const routes = [
     component: Login,
   },
 
-  // Protected layout
   {
     path: "/",
     component: AppLayout,
@@ -29,17 +28,17 @@ const routes = [
         component: ProductsPage,
       },
       {
+        path: "products/new",
+        name: "AddProduct",
+        component: () => import("../pages/AddProduct.vue"),
+      },
+      {
         path: "products/:id",
         name: "ViewProduct",
         component: ViewProduct,
       },
       {
-        path: "/products/new",
-        name: "AddProduct",
-        component: () => import("../pages/AddProduct.vue"),
-      },
-      {
-        path: "/products/:id/edit",
+        path: "products/:id/edit",
         name: "EditProduct",
         component: () => import("../pages/EditProduct.vue"),
       },
@@ -68,7 +67,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/vue_product_management/'),  // ✅ FIXED
   routes,
 });
 
