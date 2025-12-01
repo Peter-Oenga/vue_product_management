@@ -13,6 +13,10 @@ export default defineConfig({
 
   // ✔ Output build to docs/ for GitHub Pages
   build: {
-    outDir: 'docs'
+  outDir: 'docs',
+  rollupOptions: {
+    input: 'index.html'
   }
+}
+
 })
