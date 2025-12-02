@@ -68,6 +68,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory('/vue_product_management/'),  // ✅ FIXED
+  
   routes,
 });
 
